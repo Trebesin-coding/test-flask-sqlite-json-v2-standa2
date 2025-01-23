@@ -17,10 +17,14 @@ cursor.execute(
     """
 )
 
+# Hodnocení: TEXT je celým slovem, zkratka není možná
+
 # Zapsání do databáze
 
 # tady by měl vepsat hodnocení do databáze - není potřeba využívat input, stačí zapsat statický údaj
-cursor.execute("""INSERT INTO hodnoceni (id, nazev_filmu, hodnoceni) VALUES (1,'cars', 10)""")
+cursor.execute(
+    """INSERT INTO hodnoceni (id, nazev_filmu, hodnoceni) VALUES (1,'cars', 10)"""
+)
 
 connection.commit()
 
